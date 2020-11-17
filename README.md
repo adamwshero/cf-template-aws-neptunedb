@@ -19,7 +19,13 @@
 * (Optional) Creates a read-only replica in another availability zone to support external queries and keep the cluster from getting busy with read requests.
 
 # Deploy
-`aws cloudformation deploy -t main.yaml --s3-bucket myBucket --region myRegion`
+`aws cloudformation create-stack -t main.yaml --s3-bucket myBucket --region myRegion`
+
+# Update
+`aws cloudformation update-stack -t main.yaml`
+
+# Destroy
+`aws cloudformation destroy-stack -t main.yaml`
 
 # Resources
 * https://docs.aws.amazon.com/neptune/latest/userguide/access-graph-gremlin-console.html
